@@ -1,0 +1,188 @@
+/* 🌟 GENERAL PAGE STYLES */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  font-size: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 🎯 SECTION CONTAINER */
+#createTarget {
+  background: #ffffff;
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+/* 🧾 FIELDSET */
+#createTarget fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* 🏷️ LABEL STYLING */
+#createTarget label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* 🧠 INPUT + TEXTAREA STYLES */
+#createTarget input,
+#createTarget textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    background 0.25s ease;
+  outline: none;
+}
+
+#createTarget input:focus,
+#createTarget textarea:focus {
+  border-color: #3498db;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* ✍️ TEXTAREA */
+#createTarget textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* 🚀 SUBMIT BUTTON */
+#createTarget button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#createTarget button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+#createTarget button:active {
+  transform: scale(0.97);
+}
+
+/* 📌 FOOTER */
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: #bdc3c7;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  #createTarget {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.tag {
+  width: 180px;
+  padding: 10px;
+  display: block;
+  font-weight: bolder;
+  color: black;
+  display: block;
+  float: center;
+  border-radius: 8px;
+}
+
+#guage {
+  background-color: blue;
+  font-weight: bolder;
+  font-size: 1rem;
+  width: 50%;
+  justify-content: space-around;
+  display: flex;
+  border-radius: calc(5, 6);
+  margin: auto;
+}
+.card {
+  padding: 10px;
+  color: white;
+  display: block;
+  font-size: 2rem;
+}
+
+.back-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #1e88e5;
+  background-color: whitesmoke;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.back-btn a:hover {
+  background: rgba(30, 136, 229, 0.12);
+  color: #1565c0;
+}
+
+#message {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
+
+/* message types */
+.info {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.success {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.error {
+  background: #ffebee;
+  color: #b71c1c;
+}

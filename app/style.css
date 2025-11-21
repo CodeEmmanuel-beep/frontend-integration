@@ -1,0 +1,407 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background-color: #1e1e1e;
+  color: cyan;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+#hero {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+#hero button {
+  background-color: cyan;
+  color: #222;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #00b7b3;
+}
+
+/* Features */
+#features {
+  padding: 2rem;
+}
+
+#features h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#features ul {
+  list-style: square;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#features li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Auth Section */
+#auth {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.auth-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  background: #ddd;
+  font-weight: bold;
+  transition: 0.15s ease;
+  background: 0.15s ease;
+}
+
+.auth-tabs button:active {
+  transform: scale(0.95);
+}
+
+.auth-tabs button.active {
+  background: cyan;
+  color: black;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form button {
+  background-color: #00b7b3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #007d79;
+}
+
+.auth-form button:active {
+  transform: scale(0.97);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+#profileSection,
+#activitySection,
+#shortcuts {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: block;
+  text-align: center;
+  background: cyan;
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 180px;
+  transition: 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #ccc;
+  transform: translate3d();
+}
+
+.card:active {
+  transform: scale(1);
+}
+#message {
+  background: #2563eb; /* blue for info */
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  background: #16a34a;
+} /* green */
+.error {
+  background: #dc2626;
+} /* red */
+.warning {
+  background: #f59e0b;
+} /* orange */
+
+.card:hover {
+  background: #00b7b3;
+  color: white;
+}
+
+#logoutBtn {
+  float: right;
+  margin-top: -3rem;
+  margin-right: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#logoutBtn:hover {
+  background-color: #ccc;
+  transform: translateY(-2px);
+}
+
+#logoutBtn:active {
+  transform: scale(0.97);
+}
+
+.lean {
+  display: inline-block;
+  background: #0d47a1; /* deep modern blue */
+  padding: 18px 32px; /* bigger size */
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Hover effect */
+.lean:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Link styling */
+.learn {
+  text-decoration: none;
+  font-size: 1.4rem; /* bigger text */
+  font-weight: 700; /* bold */
+  color: #ffffff; /* white text on blue */
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.learn:hover {
+  color: #e3f2fd; /* lighter blue on hover */
+}
+
+#message {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
+
+/* message types */
+.info {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.success {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.error {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+#userfoto {
+  width: 120px; /* fixed width */
+  height: 120px; /* fixed height */
+  object-fit: cover; /* crop instead of stretch */
+  border-radius: 50%; /* make it circular like social media */
+}
+
+.back-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #1e88e5;
+  background-color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.back-btn a:hover {
+  background: rgba(30, 136, 229, 0.12);
+  color: #1565c0;
+}
+
+.edit {
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 2rem;
+  background-color: #faf9f6;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+}
+.fash {
+  background-color: #ff4500;
+  display: flex;
+  border: 2px solid #36454f;
+  flex-direction: column;
+}
+
+.fash input {
+  padding: 1rem;
+  margin-bottom: 20px;
+  border-radius: 15px;
+
+  font-size: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.fash label {
+  color: #36454f;
+  font-size: 2rem;
+}
+
+.fash button {
+  font-size: 2.5rem;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: #36454f;
+  color: white;
+  transition: color 0.2s ease;
+  padding: 10px;
+}
+
+.fash button:hover {
+  background-color: #16a34a;
+  transform: translateY(-4px);
+}
+
+.fash button:active {
+  transform: scale(0.8);
+}
+
+#edit {
+  background-color: #0d47a1;
+  font-size: 2.5rem;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 90%;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}

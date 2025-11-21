@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Budget" content="Task On Budget " />
+    <title>Always On Target (AOT)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Always On Target (AOT)</h1>
+    </header>
+    <main>
+      <section id="hero">
+        <h2>Welcome to AOT</h2>
+        <p>
+          Your personal command center for productivity, budgetting and focus.
+        </p>
+        <button id="getStarted">Get Started</button>
+      </section>
+      <section id="features">
+        <h3>What AOT does</h3>
+        <ul>
+          <li>
+            <strong>Comprehensive Task Management System (Target) </strong>
+            A robust platform that not only helps you organize and prioritize
+            tasks, but also integrates financial planning tools to ensure you
+            achieve your goals with confidence and ease.
+          </li>
+          <li>
+            <strong>Expense Tracking </strong> Accurately log, monitor, and
+            manage your spending to maintain financial discipline and gain clear
+            insights into your budget.
+          </li>
+          <li>
+            <strong>Messaginng </strong> Seamlessly communicate with fellow
+            users, particularly within your professional or personal circles,
+            fostering collaboration and engagement.
+          </li>
+          <li><strong>Secure & Fast </strong> Powered by FastAPI</li>
+        </ul>
+      </section>
+      <section id="auth">
+        <div class="auth-tabs">
+          <button id="showLogin" class="active">Login</button
+          ><button id="showRegister">Register</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+          <h3>Login</h3>
+          <label>Username</label>
+          <input type="text" id="lusername" placeholder="Username" required />
+          <label>Password</label>
+          <input
+            type="password"
+            id="lpassword"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <form id="registerForm" class="auth-form hidden">
+          <h3>Register</h3>
+          <label for="picture">Profile Picture</label>
+          <input type="file" id="profile_picture" />
+          <label for="Full Name">Full Name</label>
+          <input type="text" , id="fullname" placeholder="Full Name" required />
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Email" required />
+          <label for="Username">Username</label>
+          <input type="text" id="username" placeholder="Username" required />
+          <label>Nationality</label>
+          <input
+            type="text"
+            id="nationality"
+            placeholder="Nationality"
+            required
+          />
+          <label for="date">D.O.B</label>
+          <input type="date" , id="dob" />
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            ,
+            id="confirm_password"
+            placeholder="Confirm Password"
+            required
+          />
+          <p><button type="reset">refresh</button></p>
+          <button type="submit">Register</button>
+        </form>
+        <div id="message" class="hidden"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © Always On Target 2025|
+        <a href="https://www.fiverr.com/s/0bxdoeE" target="_blank">Visit gig</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

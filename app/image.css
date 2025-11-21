@@ -1,0 +1,46 @@
+body {
+  background-image: url("image.jpg");
+}
+
+.lick {
+  background-color: #fff5e1;
+  padding: 15px;
+  font-weight: bolder;
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  width: 30%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 8px (rgba(0, 0, 0, 0.1));
+  border-radius: 8px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.back-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #1e88e5;
+  background-color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.back-btn a:hover {
+  background: rgba(30, 136, 229, 0.12);
+  color: #1565c0;
+}

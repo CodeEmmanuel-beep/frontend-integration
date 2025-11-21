@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <title>AOT Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Welcome to Your AOT Dashboard</h1></header>
+    <main>
+      <section id="profileSection">
+        <h2>Hello <span id="userName">User</span>, Welcome</h2>
+        <p>
+          <strong>Photo: </strong
+          ><a id="userfotoLink" target="_blank"
+            ><img id="userfoto" alt="Profile Picture"
+          /></a>
+        </p>
+        <p><strong>Username: </strong><span id="userUsername"></span></p>
+        <p><strong>Email: </strong><span id="userEmail">Loading...</span></p>
+        <p>
+          <strong>Nationality: </strong><span id="userNation">Loading...</span>
+        </p>
+        <p><strong>Age: </strong><span id="userAge">Loading...</span></p>
+        <p>
+          <strong>Phone Number: </strong><span id="userMobile">Loading...</span>
+        </p>
+        <p><strong>Address: </strong><span id="userAdd">Loading...</span></p>
+        <p>This is your productivity dashboard. Explore your tools below:</p>
+      </section>
+      <section>
+        <div class="edit">
+          <button class="ed" id="edit">Edit Profile</button>
+          <form action="edit" class="fash hidden" id="ed">
+            <label for="foto">Profile Picture</label>
+            <input type="file" id="pp" />
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Full Name" />
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" />
+            <label for="nation">Nationality</label>
+            <input type="text" id="nation" placeholder="Nationality" />
+            <label for="age">DOB</label>
+            <input type="date" id="age" />
+            <label for="address">Address</label>
+            <input type="text" id="add" placeholder="Address" />
+            <label for="number">Phone Number</label>
+            <input type="number" id="phone" placeholder="mobile number" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Search For Acquaintances</h2>
+          <form id="sea">
+            <input type="text" placeholder="Enter Name" id="rch" required />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        <ul id="profiles">
+          <li>Profiles</li>
+        </ul>
+      </section>
+      <section id="activitySection">
+        <h3>Your Latest Activities</h3>
+        <ul id="activityList">
+          <li>Loading your recent activities...</li>
+        </ul>
+        <div id="message" class="hidden info"></div>
+      </section>
+      <section>
+        <div id="profile_modal" class="modal hidden">
+          <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modal_body"></div>
+          </div>
+        </div>
+      </section>
+      <section id="shortcuts">
+        <h3>Quick Access</h3>
+        <div class="grid">
+          <ul>
+            <li>
+              <a href="target_create.html" class="card">Create Target</a>
+            </li>
+            <li>
+              <p>
+                <a href="http://localhost:8000" class="card">Expense Tracker</a>
+              </p>
+            </li>
+            <li>
+              <a href="http://localhost:8000" class="card">Goal setter</a>
+            </li>
+            <li>
+              <p>
+                <a href="http://localhost:8000" class="card"
+                  >Messaging Center</a
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="lean"><a href="link.html" class="learn">Target</a></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © 2025 AOT|
+        <a href="index.html"><button id="logoutBtn">Logout</button></a>
+      </p>
+    </footer>
+    <script src="dashboardscript.js"></script>
+  </body>
+</html>
