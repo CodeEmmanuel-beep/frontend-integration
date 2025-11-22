@@ -214,3 +214,42 @@ footer {
   background: rgba(30, 136, 229, 0.12);
   color: #1565c0;
 }
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  background-color: blue;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(30, 136, 229, 0.12);
+  color: #1565c0;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  float: right;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  background-color: darkblue;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.home:hover {
+  background: rgba(30, 136, 229, 0.12);
+  color: #1565c0;
+}

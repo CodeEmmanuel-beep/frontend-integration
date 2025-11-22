@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Target List</title>
+    <link rel="stylesheet" href="/css/list.css" />
+  </head>
+  <body>
+    <header><h1>Your Targets</h1></header>
+    <main>
+      <div>
+        <a class="back-btn" href="link.html">Back</a
+        ><a class="home" href="dashboard.html">Home</a>
+      </div>
+      <section id="hero">
+        <h2>Completed, pending, expired and all targets at a glance.</h2>
+      </section>
+      <section>
+        <div id="guage">
+          <button type="click" id="vt" class="active">View Targets</button>
+          <button type="click" id="view_c">View Completed Targets</button>
+          <button type="click" id="view_u">View Pending Target</button>
+          <button type="button" , id="view_e">View Expired Target</button>
+          <p>
+            <input type="number" id="target_id" placeholder="Enter target ID" />
+          </p>
+          <button type="click" id="view_o">View A Particular Target</button>
+        </div>
+        <div id="message" class="hidden info"></div>
+      </section>
+      <section>
+        <ul>
+          <li id="list" class="view">Targets</li>
+        </ul>
+        <ul>
+          <li id="list_c" class="view hidden">Completed Targets</li>
+        </ul>
+        <ul>
+          <li id="list_u" class="view hidden">Pending Targets</li>
+        </ul>
+        <ul>
+          <li id="list_o" class="view hidden">View A Particular Target</li>
+        </ul>
+        <ul>
+          <li id="list_e" class="view hidden">View Expired Target</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>© 2025 AOT</p></footer>
+    <script src="/js/get.js"></script>
+  </body>
+</html>

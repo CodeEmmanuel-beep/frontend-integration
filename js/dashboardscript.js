@@ -10,7 +10,12 @@ if (!token) {
   messaging("please login first");
   window.location.href = "index.html";
 }
-
+const search = document.getElementById("see");
+const searchs = document.getElementById("sea");
+search.addEventListener("click", () => {
+  searchs.classList.toggle("hidden");
+  search.classList.toggle("active");
+});
 async function fetchProfile() {
   function messaging(text, type = "info") {
     const show = document.getElementById("message");

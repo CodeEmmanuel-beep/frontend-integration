@@ -3,7 +3,7 @@
   <head lang="en">
     <meta charset="utf-8" />
     <title>AOT Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header><h1>Welcome to Your AOT Dashboard</h1></header>
@@ -16,7 +16,9 @@
             ><img id="userfoto" alt="Profile Picture"
           /></a>
         </p>
-        <p><strong>Username: </strong><span id="userUsername"></span></p>
+        <p>
+          <strong>Username: </strong><span id="userUsername">Loading...</span>
+        </p>
         <p><strong>Email: </strong><span id="userEmail">Loading...</span></p>
         <p>
           <strong>Nationality: </strong><span id="userNation">Loading...</span>
@@ -26,7 +28,6 @@
           <strong>Phone Number: </strong><span id="userMobile">Loading...</span>
         </p>
         <p><strong>Address: </strong><span id="userAdd">Loading...</span></p>
-        <p>This is your productivity dashboard. Explore your tools below:</p>
       </section>
       <section>
         <div class="edit">
@@ -51,16 +52,16 @@
         </div>
       </section>
       <section>
-        <div>
-          <h2>Search For Acquaintances</h2>
-          <form id="sea">
+        <div class="search">
+          <button type="button" id="see" class="active">
+            Search For Acquaintances
+          </button>
+          <form id="sea" class="sea hidden">
             <input type="text" placeholder="Enter Name" id="rch" required />
             <button type="submit">Search</button>
           </form>
         </div>
-        <ul id="profiles">
-          <li>Profiles</li>
-        </ul>
+        <ul id="profiles"></ul>
       </section>
       <section id="activitySection">
         <h3>Your Latest Activities</h3>
@@ -78,9 +79,9 @@
         </div>
       </section>
       <section id="shortcuts">
-        <h3>Quick Access</h3>
+        <h3 class="quick">Quick Access</h3>
         <div class="grid">
-          <ul>
+          <ul id="grid">
             <li>
               <a href="target_create.html" class="card">Create Target</a>
             </li>
@@ -94,7 +95,7 @@
             </li>
             <li>
               <p>
-                <a href="http://localhost:8000" class="card"
+                <a href="messaging_center.html" class="card"
                   >Messaging Center</a
                 >
               </p>
@@ -108,10 +109,10 @@
     </main>
     <footer>
       <p>
-        © 2025 AOT|
+        © 2025 AOT
         <a href="index.html"><button id="logoutBtn">Logout</button></a>
       </p>
     </footer>
-    <script src="dashboardscript.js"></script>
+    <script src="/js/dashboardscript.js"></script>
   </body>
 </html>

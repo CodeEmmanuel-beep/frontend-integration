@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Creatw Target</title>
+    <link rel="stylesheet" href="/css/flex.css" />
+  </head>
+  <body>
+    <header><h1>Set Target</h1></header>
+    <main>
+      <section>
+        <div class="back-btn"><a href="link.html">Back</a></div>
+        <form id="createTarget">
+          <fieldset>
+            <label for="cTarget">Target</label>
+            <textarea
+              name="Target"
+              id="cTarget"
+              placeholder="Set Your Target"
+              required
+            ></textarea>
+            <label for="artht">Target Price</label>
+            <input
+              type="number"
+              id="artht"
+              placeholder="amount_required_to_hit_target"
+              required
+            />
+            <label for="dtt">Target Day</label>
+            <input
+              type="number"
+              id="dtt"
+              placeholder="days_to_target"
+              required
+            />
+            <label for="mi">Earnings</label>
+            <input
+              type="number"
+              id="mi"
+              placeholder="monthly_income"
+              required
+            />
+            <label for="as">Savings</label>
+            <input
+              type="number"
+              id="as"
+              placeholder="amount_saved (leave blank if you have no savings yet)"
+            />
+            <button type="submit" id="tBtn">submit</button>
+          </fieldset>
+        </form>
+        <div id="message" class="hidden"></div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 AOT</p>
+    </footer>
+    <script src="/js/create.js"></script>
+  </body>
+</html>
