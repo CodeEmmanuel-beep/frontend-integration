@@ -1,5 +1,10 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const currentUser = localStorage.getItem("username");
+  console.log("Current user on dashboard:", currentUser);
+  console.log("Dashboard origin:", window.location.origin);
+  console.log("localStorage keys:", Object.keys(localStorage));
+});
 function messaging(text, type = "info") {
-  const show = document.getElementById("message");
   show.textContent = text;
   show.className = "message";
   show.classList.add(type);
@@ -32,8 +37,6 @@ async function fetchProfile() {
     if (res.ok) {
       const result = await res.json();
       const user = result.user;
-      console.log("User object:", user);
-
       const baseUrl = "http://localhost:8000";
       document.getElementById("userfoto").src = baseUrl + user.profile_picture;
       document.getElementById("userfotoLink").href =
@@ -41,11 +44,9 @@ async function fetchProfile() {
       console.log("Profile picture URL:", user.profile_picture);
       document.getElementById("userName").textContent = user.name;
       document.getElementById("userUsername").textContent = user.username;
-      console.log("username:", user.username);
       document.getElementById("userEmail").textContent = user.email;
       document.getElementById("userMobile").textContent = user.phone_number;
       document.getElementById("userNation").textContent = user.nationality;
-      console.log("Nationality:", user.nationality);
       document.getElementById("userAge").textContent = user.age || "-";
       document.getElementById("userAdd").textContent = user.address;
     } else {
@@ -115,6 +116,7 @@ edit_profile.addEventListener("submit", async (e) => {
   }
 });
 const searches = document.getElementById("sea");
+console.log("search", searches);
 searches.addEventListener("submit", async (e) => {
   e.preventDefault();
   function messaging(text, type = "info") {
@@ -208,13 +210,8 @@ searches.addEventListener("submit", async (e) => {
     console.error(err);
   }
 });
+
 async function fetchActivities() {
-  function messaging(text, type = "info") {
-    const show = document.getElementById("message");
-    show.textContent = text;
-    show.classList.add(type);
-    show.classList.remove("hidden");
-  }
   try {
     const res = await fetch("http://localhost:8000/activity/recent", {
       headers: { Authorization: `Bearer ${token}` },

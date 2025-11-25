@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <title>Messaging Center</title>
+    <link rel="stylesheet" href="/css/messaging.css" />
+  </head>
+  <body>
+    <header><h1>Chadem</h1></header>
+    <main>
+      <section>
+        <div>
+          <a class="back-btn" href="messaging_center.html">Back</a>
+          <a class="home" href="dashboard.html">Home</a>
+          <h3 id="str">Messages</h3>
+          <div id="strings"></div>
+        </div>
+      </section>
+      <section class="ctrl">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+      </section>
+      <section><div id="message" class="hidden"></div></section>
+      <section>
+        <form action="chat" class="box" id="chat">
+          <h2 id="al">AOT Messenger</h2>
+          <label for="pic">Photo</label>
+          <input type="file" id="chatpic" />
+          <label for="chat">chadem</label
+          ><textarea
+            name="chatbox"
+            id="chatbox"
+            placeholder="chadem"
+          ></textarea>
+          <button>Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>© 2025 AOT</footer>
+    <script src="/js/message.js"></script>
+  </body>
+</html>

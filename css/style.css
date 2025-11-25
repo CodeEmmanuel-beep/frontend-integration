@@ -1,4 +1,3 @@
-/* General Page Styling */
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
@@ -18,7 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
 #hero {
   background-color: #222;
   color: white;
@@ -41,7 +39,6 @@ html {
   background-color: #00b7b3;
 }
 
-/* Features */
 #features {
   padding: 2rem;
 }
@@ -62,7 +59,6 @@ html {
   line-height: 1.6;
 }
 
-/* Auth Section */
 #auth {
   max-width: 400px;
   margin: 2rem auto;
@@ -238,7 +234,7 @@ footer {
   transform: scale(1);
 }
 #message {
-  background: #2563eb; /* blue for info */
+  background: #2563eb;
   color: #fff;
   padding: 1rem;
   border-radius: 8px;
@@ -255,13 +251,13 @@ footer {
 
 .success {
   background: #16a34a;
-} /* green */
+}
 .error {
   background: #dc2626;
-} /* red */
+}
 .warning {
   background: #f59e0b;
-} /* orange */
+}
 
 .card:hover {
   background: #00b7b3;
@@ -292,31 +288,29 @@ footer {
 
 .lean {
   display: inline-block;
-  background: #0d47a1; /* deep modern blue */
-  padding: 18px 32px; /* bigger size */
+  background: #0d47a1;
+  padding: 18px 32px;
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* Hover effect */
 .lean:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
-/* Link styling */
 .learn {
   text-decoration: none;
-  font-size: 1.4rem; /* bigger text */
-  font-weight: 700; /* bold */
-  color: #ffffff; /* white text on blue */
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
   letter-spacing: 1px;
   transition: color 0.2s ease;
 }
 
 .learn:hover {
-  color: #e3f2fd; /* lighter blue on hover */
+  color: #e3f2fd;
 }
 
 #message {
@@ -327,12 +321,10 @@ footer {
   font-size: 1rem;
 }
 
-/* hidden */
 .hidden {
   display: none;
 }
 
-/* message types */
 .info {
   background: #e3f2fd;
   color: #0d47a1;
@@ -349,10 +341,10 @@ footer {
 }
 
 #userfoto {
-  width: 120px; /* fixed width */
-  height: 120px; /* fixed height */
-  object-fit: cover; /* crop instead of stretch */
-  border-radius: 50%; /* make it circular like social media */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .back-btn a {

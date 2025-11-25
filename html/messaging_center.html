@@ -3,26 +3,118 @@
   <head lang="en">
     <meta charset="utf-8" />
     <title>Messaging Center</title>
+    <link rel="stylesheet" href="/css/messaging.css" />
   </head>
   <body>
-    <header>Chadem</header>
+    <header><h1>Chadem</h1></header>
     <main>
       <section>
         <div>
+          <a class="back-btn" href="dashboard.html">Back</a>
+          <h3 id="str">Messages</h3>
           <ul id="strings"></ul>
-          <h3>Messages</h3>
         </div>
-      </section>
-      <div><button id="chatbtn">Chat-UP</button></div>
-      <form action="chat" class="box hidden" id="chat">
-        <h2 id="al">AOT Messenger</h2>
-        <label for="chat">chadem</label
-        ><textarea name="chatbox" id="chatbox" placeholder="chadem"></textarea>
-        <button>Send</button>
         <div id="showMessage" class="hidden"></div>
-      </form>
+      </section>
     </main>
     <footer>© 2025 AOT</footer>
-    <script src="/js/connect.js"></script>
+    <script>
+      async function Messages() {
+        const token = localStorage.getItem("access_token");
+        function messaging(text, type = "info") {
+          const show = document.getElementById("showMessage");
+          console.log("show", show);
+          show.textContent = text;
+          show.classList.add(type);
+          show.classList.remove("hidden");
+        }
+
+        try {
+          const res = await fetch("http://127.0.0.1:8000/message/view", {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          const message = document.getElementById("strings");
+          if (res.ok) {
+            message.innerHTML = "";
+            const text = await res.json();
+            console.log("raw response", text);
+            const send = text.data?.conversations || [];
+            console.log("send", send);
+            if (Object.keys(send).length == 0) {
+              message.innerHTML = "you have no messages";
+            } else {
+              function augument(parent, key, value) {
+                if (key === "pics" && value) {
+                  const img = document.createElement("img");
+                  img.src = value;
+                  parent.append(img);
+                } else {
+                  const row = document.createElement("div");
+                  row.textContent = `${key}: ${value}`;
+                  parent.appendChild(row);
+                }
+              }
+              for (const [convID, msgs] of Object.entries(send)) {
+                const title = document.createElement("h3");
+                title.textContent = `Conversations: ${convID}`;
+                message.append(title);
+                const messages = msgs[msgs.length - 1];
+                const li = document.createElement("li");
+                li.style.marginBottom = "15px";
+                li.style.borderRadius = "15px";
+                li.style.padding = "10px";
+                li.style.maxWidth = "600px";
+                li.style.background = "white";
+                li.style.margin = "auto";
+                if (messages.pics) {
+                  const img = document.createElement("div");
+                  img.style.height = "150px";
+                  img.style.width = "150px";
+                  img.src = msg.pics;
+                  li.appendChild(img);
+                }
+                const mess = document.createElement("p");
+                mess.textContent = messages.message;
+                li.appendChild(mess);
+                const time = document.createElement("p");
+                time.textContent = messages.time_of_chat;
+                li.appendChild(time);
+                const currentUser = localStorage.getItem("username");
+                console.log("current", currentUser);
+                const otherUser =
+                  messages.username === currentUser
+                    ? messages.receiver
+                    : messages.username;
+                const button = document.createElement("button");
+                button.textContent = "open chat";
+                button.style.fontSize = "1.5rem";
+                button.style.background = "blue";
+                button.style.float = "right";
+                button.style.color = "white";
+                button.style.padding = "10px";
+                button.style.marginBottom = "10px";
+                button.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  window.location.href = `/html/messagebox.html?name=${encodeURIComponent(
+                    otherUser
+                  )}`;
+                });
+                li.appendChild(button);
+                message.append(li);
+              }
+            }
+          } else {
+            message.innerHTML = "Could not load message";
+            const error = await res.json();
+            console.error("error", error);
+          }
+        } catch (err) {
+          messaging("Network glitch, check your connection and try again");
+          console.error(err);
+        }
+      }
+      Messages();
+    </script>
   </body>
 </html>

@@ -97,8 +97,17 @@ loginForm.addEventListener("submit", async (e) => {
     }
     if (res.ok) {
       const result = await res.json();
-      localStorage.setItem("access_token", result.data.access_token);
+      const username = result.data?.username || result.username;
+      const accessToken = result.data?.access_token || result.access_token;
+
+      if (username && accessToken) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("access_token", accessToken);
+        console.log("Username stored in localStorage:", username);
+        cool("Login successful!", "success");
+      }
       cool("login successful!", "success");
+
       window.location.href = "dashboard.html";
     } else {
       const error = await res.json();
