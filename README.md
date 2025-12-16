@@ -1,6 +1,5 @@
 📄 frontend‑integration
 
-
 A full‑featured vanilla JavaScript frontend originally built to integrate with a custom API.
 
 🚀 Overview
@@ -21,7 +20,7 @@ Error Handling: Graceful fallback UI for failed requests
 
 Dynamic Rendering: DOM updates based on user interactions
 
-Modular Architecture: Reusable utilities and organized code structure
+UI Animations: Built‑in transitions and animated UI elements for a smoother experience
 
 Responsive UI: Works across devices
 
@@ -58,4 +57,5 @@ This repository remains as a standalone demonstration of the original frontend l
 
 Author
 Emmanuel Eke
+
 emmanuelchiedueke01@gmail.com
