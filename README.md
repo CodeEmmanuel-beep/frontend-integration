@@ -1,4 +1,6 @@
 📄 frontend‑integration
+
+
 A full‑featured vanilla JavaScript frontend originally built to integrate with a custom API.
 
 🚀 Overview
